@@ -8,14 +8,7 @@ int main()
  for(int row=0;row<3;row++)
     {
 
-        for(int cloumn=0;cloumn<3;cloumn++)
-        {
-
-            cout<<"enter the value at"<<row<<cloumn<<endl;
-            cin>>array[row][cloumn];
-
-        }
-        cout<<endl;
+      
 
 
     }

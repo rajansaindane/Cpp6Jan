@@ -2,32 +2,67 @@
 
 using namespace std;
 
-class Calculator
+class Employee
 {
+    public : 
+    string name;
+    string address;
+    string city;
+    Company companyl;
+       
+    void getName(string name)
+    {
+        this->name=name;
+    }
+    string setName()
+    {
+        return name;
+    }
 
     void  add(int a,int  b)
     {
         cout<<"Addition : "<<a+b<<endl;
     }
-     void  sub(int a,int  b)
+    public : 
+     void  add(int a)
     {
-        cout<<"Substraction : "<<a-b<<endl;
+        cout<<"Substraction : "<<a<<endl;
     }
 
 };
-class Exam
+class Company 
 {
+
+    string cName;
+    string   cAdress;
+    public :
+
+
+     void  add(int a)
+    {
+
+    }
+
+};
+class Student: public Calculator
+{
+    public :
+     void  add(int a)
+    {
+
+    }
 
 };
 
 int main()
 {
     Calculator calculator;
+    Exam exam;
     int a,b;
     cout << "Enter the valuea  and b : "<<endl;
     cin >> a>>b;
     cout << "a : "<<a << endl;
     calculator.add(a,b);
-    calculator.sub(a,b);
+    exam.
     return 0;
 }
