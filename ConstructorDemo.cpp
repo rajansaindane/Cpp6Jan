@@ -4,23 +4,32 @@ using namespace std;
 class ConstructorDemo
 {
     public:
-
+    string name;
+    string address;
     ConstructorDemo()
     {
         cout<<"inside constructor"<<endl;
     }
-      ConstructorDemo(int a) : ConstructorDemo(10,20)
+      ConstructorDemo(int a)
     {
         cout<<"inside parametrised constructor : "<<a<<endl;
     }
-      ConstructorDemo(int a,int b) : ConstructorDemo()
+      ConstructorDemo(string name,string address) 
     {
-                cout<<"a :"<<a<<endl;
-                cout<<"b :"<<b<<endl;
+        this->name=name;  
+         this->address=address;
     }
+
+    ~ConstructorDemo()
+    {
+        cout<<"Inside distructor"<<endl;
+    }
+
     void showData()
     {
-        cout<<"inside showData"<<endl;
+        cout<<"name : "<<name<<endl;
+        cout<<"address : "<<address<<endl;
+
     }
      void display()
     {
@@ -30,10 +39,10 @@ class ConstructorDemo
 };
 int main()
 {
-    ConstructorDemo demo=ConstructorDemo(10);
-    ;//object create
+    ConstructorDemo demo=ConstructorDemo("viraj","punekar");
+    //object create
     demo.showData();
-    demo.display();
+    
 
     return 0;
 }
